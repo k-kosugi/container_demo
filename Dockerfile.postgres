@@ -1,0 +1,6 @@
+FROM postgres:10
+EXPOSE 5432:5432
+ENV POSTGRES_USER=user
+ENV POSTGRES_PASSWORD=mypassword
+ENV POSTGRES_DB=sampledb
+COPY ./sampledb.sql /docker-entrypoint-initdb.d/
